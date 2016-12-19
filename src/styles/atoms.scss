@@ -119,3 +119,61 @@
     }
   }
 }
+
+// Input Field Atom
+//
+// A simple text input.
+//
+// Exercise 1.5a: Write some style definitions for the input field to spice it
+// up. Just add different background colors to the default and active states if
+// you do not feel creative right now.
+//
+// Default - the interactive default state
+// :focus - the state when the field has focus
+// :hover - the state when the field has Hover
+//
+// markup:
+// <input type="text" class="eg-input {$modifiers}">
+// <input type="text" class="eg-input {$modifiers}" placeholder="placeholder">
+// <input type="text" class="eg-input {$modifiers}" value="value">
+//
+// Styleguide 1.4
+
+.eg-input {
+  color:$eg-color-brown;
+  &:focus {
+    color:$eg-color-cyan;
+    font-weight:bold;
+  }
+  &:hover {
+    color:$eg-color-cyan;
+    font-weight:bold;
+    text-decoration:underline;
+  }
+}
+
+// Ejemplo (Con wrapper)
+//
+//
+// .li_modelo1 - Elemento lista modelo 1
+// .li_modelo2 - Elemento lista modelo 2
+// default - Elemento lista
+//
+// markup:
+// <li class="li_defecto {$modifiers}">Item</li>
+//
+// sg-wrapper:
+//   <ul>
+//     <sg-wrapper-content/>
+//   </ul>
+//
+// Styleguide 1.5
+.li_defecto {
+    color:red;
+    &.li_modelo1{
+      color:blue;
+    }
+    &.li_modelo2{
+      color:brown;
+    }
+}
